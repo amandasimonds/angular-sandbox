@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem } from "@angular/cdk/drag-drop"
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-sandbox';
+  
+  ownedAnimals = [
+    'gerbil',
+    'dog',
+    'cat',
+    'duck'
+  ];
+
+  onDrop(event: CdkDragDrop<string []>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      )
+    } else {
+      copyArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      )
+    }
+  }
 }
