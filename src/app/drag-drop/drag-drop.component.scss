@@ -1,0 +1,62 @@
+.drag-box {
+    width: 100px;
+    margin: 2px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 2px dashed gray;
+    position: relative;
+}
+
+.drag-item {
+    padding: 1em;
+    border: 1px solid gray;
+    background-color: white;
+    cursor: grab;
+}
+
+.cdk-drag-preview {
+    background-color: lightgray;
+}
+
+.cdk-drag-placeholder {
+    background-color: lightblue;
+    opacity: 0.5;
+}
+
+.cdk-drag-animating {
+    transition:  transform 200ms;
+}
+
+.cdk-drop-list-dragging .cdk-drag {
+    transition:  transform 200ms;
+}
+
+#bounding-box {
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    border: 3px solid orange;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.handle {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    cursor: grab;
+}
+
+.container {
+    padding: 30px;
+}
+
+.divider {
+    margin: 20px 0;
+    border-bottom: 1px solid lightgray;
+}

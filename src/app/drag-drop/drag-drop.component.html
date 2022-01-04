@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div cdkDropList
+    style="display: flex;"
+    cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="onDrop($event)"
+    [cdkDropListData]="ownedAnimals">
+  
+      <div cdkDrag 
+      class="drag-item"
+      *ngFor="let animal of ownedAnimals">
+        {{animal}}
+      </div>
+      
+    </div>
+  
+    <div class="divider"></div>
+  
+    <!-- <div cdkDropListGroup> -->
+  
+      <h2>Owned Animals</h2>
+      <div cdkDropList
+      id="ownedAnimals"
+      cdkDropListConnectedTo="animalWishlist"
+      style="margin-bottom: 12px;"
+      (cdkDropListDropped)="onDrop($event)"
+      [cdkDropListData]="ownedAnimals">
+  
+        <div cdkDrag 
+        class="drag-item"
+        *ngFor="let animal of ownedAnimals">
+          {{animal}}
+        </div>
+        
+      </div>
+  
+      <app-animal-wishlist></app-animal-wishlist>
+  
+    <!-- </div> -->
+  
+      <div id="bounding-box">
+        <div cdkDrag 
+        cdkDragLockAxis="y"
+        cdkDragBoundary="#bounding-box" 
+        class="drag-box">
+        Drag me!
+          <div class="handle" cdkDragHandle>
+            
+          </div>
+        </div>
+      </div>
+  
+  </div>
+  <router-outlet></router-outlet>
+  

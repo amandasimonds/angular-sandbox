@@ -15,9 +15,12 @@ export class AnimalWishlistComponent implements OnInit {
     'main coone'
   ];
 
+  showItems = false;
+
   
   onDrop(event: CdkDragDrop<string []>) {
     if (event.previousContainer === event.container) {
+      
       moveItemInArray(
         event.container.data,
         event.previousIndex,
@@ -31,6 +34,10 @@ export class AnimalWishlistComponent implements OnInit {
         event.currentIndex
       )
     }
+  }
+
+  toggleShowItems() {
+    this.showItems = !this.showItems;
   }
 
   constructor() { }

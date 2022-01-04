@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AnimalWishlistComponent } from './animal-wishlist/animal-wishlist.component';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
+import { TableComponent } from './table/table.component';
+import { CustomTableComponent } from './table/custom-table/custom-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalWishlistComponent
+    AnimalWishlistComponent,
+    DragDropComponent,
+    TableComponent,
+    CustomTableComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div class="table-container">
+    <div class="table">
+        <div class="table-column">
+            <div class="column" *ngFor="let col of cols">{{col.colName}}</div>
+        </div>
+        <div class="table-row" *ngFor="let item of items; index as i">
+            <div class="row">{{item.name}}</div>
+            <div class="row">{{item.type}}</div>
+            <div class="row">{{item.lastModified}}</div>
+            <div class="row">{{item.restrictedAccess}}</div>
+        </div>
+    </div>
+    <div class="actions">
+        <button>Back</button>
+        <button>Next</button>
+    </div>
+</div>

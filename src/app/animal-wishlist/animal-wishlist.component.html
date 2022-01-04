@@ -1,14 +1,15 @@
-<h2>Animal Wishlist</h2>
 <div cdkDropList
 id="animalWishlist"
-cdkDropListConnectedTo="ownedAnimals"
 (cdkDropListDropped)="onDrop($event)"
 [cdkDropListData]="animalWishlist">
+<h2 (click)="toggleShowItems()">Animal Wishlist</h2>
+<div *ngIf="showItems">
 
-  <div cdkDrag 
-  class="drag-item"
-  *ngFor="let animal of animalWishlist">
+    <div cdkDrag
+    class="drag-item"
+    *ngFor="let animal of animalWishlist">
     {{animal}}
-  </div>
+</div>
+</div>
   
 </div>

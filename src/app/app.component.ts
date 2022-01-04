@@ -8,27 +8,5 @@ import { CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem } from "
 })
 export class AppComponent {
   
-  ownedAnimals = [
-    'gerbil',
-    'dog',
-    'cat',
-    'duck'
-  ];
-
-  onDrop(event: CdkDragDrop<string []>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      )
-    } else {
-      copyArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      )
-    }
-  }
+  
 }
