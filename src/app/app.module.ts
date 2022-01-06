@@ -9,6 +9,7 @@ import { AnimalWishlistComponent } from './animal-wishlist/animal-wishlist.compo
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { TableComponent } from './table/table.component';
 import { CustomTableComponent } from './table/custom-table/custom-table.component';
+import { RedblackDirective } from './redblack.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomTableComponent } from './table/custom-table/custom-table.componen
     AnimalWishlistComponent,
     DragDropComponent,
     TableComponent,
-    CustomTableComponent
+    CustomTableComponent,
+    RedblackDirective
   ],
   imports: [
     BrowserModule,
