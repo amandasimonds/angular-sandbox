@@ -8,8 +8,8 @@ export class RedblackDirective {
   constructor(private el: ElementRef) { 
     console.log(el.nativeElement.offsetTop);
     el.nativeElement.style.color = 'orange';
-    el.nativeElement.style.top = "200px";
-    el.nativeElement.style.position = "relative"
+    // el.nativeElement.style.top = "200px";
+    // el.nativeElement.style.position = "relative"
   }
 
 }

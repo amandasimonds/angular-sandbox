@@ -10,6 +10,7 @@ import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { TableComponent } from './table/table.component';
 import { CustomTableComponent } from './table/custom-table/custom-table.component';
 import { RedblackDirective } from './redblack.directive';
+import { CheckNumDirective } from './check-num.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RedblackDirective } from './redblack.directive';
     DragDropComponent,
     TableComponent,
     CustomTableComponent,
-    RedblackDirective
+    RedblackDirective,
+    CheckNumDirective
   ],
   imports: [
     BrowserModule,
