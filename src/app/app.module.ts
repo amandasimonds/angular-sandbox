@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +17,12 @@ import { TableComponent } from './table/table.component';
 import { CustomTableComponent } from './table/custom-table/custom-table.component';
 import { RedblackDirective } from './redblack.directive';
 import { CheckNumDirective } from './check-num.directive';
+import { HomeComponent } from './home/home.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { HideAfterDirective } from './hide-after.directive';
+import { AdvancedSearchControlComponent } from './advanced-search-control/advanced-search-control.component';
+import { CustomFormFieldControlComponent } from './custom-form-field-control/custom-form-field-control.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,13 +32,24 @@ import { CheckNumDirective } from './check-num.directive';
     TableComponent,
     CustomTableComponent,
     RedblackDirective,
-    CheckNumDirective
+    CheckNumDirective,
+    HomeComponent,
+    DirectivesComponent,
+    HideAfterDirective,
+    AdvancedSearchControlComponent,
+    CustomFormFieldControlComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    CommonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatDividerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

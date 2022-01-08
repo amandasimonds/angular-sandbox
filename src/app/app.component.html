@@ -1,17 +1,11 @@
 <div class="nav">
     <a routerLink="">Home</a> |
     <a routerLink="drag-drop">Drag-drop</a> |
-    <a routerLink="custom table">custom table</a>
+    <a routerLink="custom table">custom table</a> |
+    <a routerLink="directives">Directives</a>|
+    <a routerLink="custom-form">Custom Form</a>
 </div>
-
-<!-- <div class="splash">
-    hello world
-</div> -->
 
 <div class="container">
-
-    <p customStyleDirective>Email ID:</p>
-    <input type="text" checkNum [defaultValue]="number" successColor="blue">
+    <router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+<div class="container">
+
+    <p customStyleDirective>Email ID:</p>
+    <input type="text" checkNum [defaultValue]="number" successColor="blue">
+
+    <hr>
+    <div *hideAfter="3000 then placeholder" >
+        <h2>Temporary Content</h2>
+        <p>This layout should disappear in 3 seconds</p>
+    </div>
+    <ng-template #placeholder>
+        <h2>Placeholder</h2>
+    </ng-template>
+</div>
