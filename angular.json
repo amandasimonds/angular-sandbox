@@ -76,7 +76,8 @@
               "browserTarget": "angular-sandbox:build:production"
             },
             "development": {
-              "browserTarget": "angular-sandbox:build:development"
+              "browserTarget": "angular-sandbox:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

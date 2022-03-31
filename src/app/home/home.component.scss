@@ -1,6 +1,23 @@
 .splash {
-    display: flex;
-    height: 50%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll {
+  border: 2px solid gray;
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  border: 5px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.15);
 }

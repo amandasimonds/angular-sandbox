@@ -23,6 +23,9 @@ import { HideAfterDirective } from './hide-after.directive';
 import { AdvancedSearchControlComponent } from './advanced-search-control/advanced-search-control.component';
 import { CustomFormFieldControlComponent } from './custom-form-field-control/custom-form-field-control.component';
 import { CommonModule } from '@angular/common';
+import { ApiComponent } from './api/api.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { CommonModule } from '@angular/common';
     DirectivesComponent,
     HideAfterDirective,
     AdvancedSearchControlComponent,
-    CustomFormFieldControlComponent
+    CustomFormFieldControlComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,8 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     DragDropModule,
     CommonModule,
+    HttpClientModule,
+    FormsModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,

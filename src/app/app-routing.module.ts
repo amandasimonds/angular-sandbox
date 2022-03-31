@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdvancedSearchControlComponent } from './advanced-search-control/advanced-search-control.component';
+import { ApiComponent } from './api/api.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { HomeComponent } from './home/home.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
 	{
 		path: 'custom-form',
 		component: AdvancedSearchControlComponent
+	},
+	{
+		path: 'api',
+		component: ApiComponent
 	}
 ];
 

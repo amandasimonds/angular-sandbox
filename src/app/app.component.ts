@@ -16,6 +16,12 @@ export class AppComponent {
     'Coconut Oil'
   ]
 
+  numbers =[
+    4,
+    2,
+    5
+  ]
+
   bundy = {
     leg: 4,
     fur: {
@@ -31,10 +37,44 @@ export class AppComponent {
     fur: 'tan'
   }
 
+  items = [
+    {
+      type: 'item',
+      name: 'Part',
+      selected: false
+    },
+    {
+      type: 'item',
+      name: 'Requirement',
+      selected: false
+    },
+    {
+      type: 'item',
+      name: 'Material',
+      selected: false
+    },
+    {
+      type: 'item',
+      name: 'Document',
+      selected: false
+    },
+    {
+      type: 'item',
+      name: 'EXH',
+      selected: false
+    },
+    {
+      type: 'item',
+      name: 'Stainless Steel',
+      selected: false
+    }
+];
+
   color = _.get(this.bean, "fur", this.bean.fur)
 
   ngOnInit(): void {
-    console.log(this.color);
+    const array = this.numbers.map(i => this.items[i]);
+    console.log(array);
   }
 
   public arrayStuff() {
