@@ -1,6 +1,14 @@
-<div class="splash">
-    hello world
+<div class="splash" epdPlRegisterIcon>
+    hello world <mat-icon svgIcon="profile"></mat-icon>
 </div>
+<div style="display: flex; width: 300px; flex-wrap: wrap;">
+    <span *ngFor="let icon of icons">
+        <mat-icon [svgIcon]="icon.name"></mat-icon>
+    </span>
+</div>
+
+<epd-pl-search-field></epd-pl-search-field>
+
 
 <div class="scroll ">
     <h2>scroll box</h2>

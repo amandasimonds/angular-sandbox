@@ -26,6 +26,7 @@ import { CommonModule } from '@angular/common';
 import { ApiComponent } from './api/api.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { SearchFieldModule, RegisterIconModule, ICON_SET, RegisterIconDirective } from "epd-pattern-library";
 
 @NgModule({
   declarations: [
@@ -49,13 +50,15 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     BrowserAnimationsModule,
     DragDropModule,
     CommonModule,
-    HttpClientModule,
+    // HttpClientModule,
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
     MatDividerModule,
-    MatSelectModule
+    MatSelectModule,
+    SearchFieldModule,
+    RegisterIconModule.forRoot(ICON_SET)
   ],
   providers: [],
   bootstrap: [AppComponent]

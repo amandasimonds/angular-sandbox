@@ -130,7 +130,7 @@
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/cdk@12.2.13":
+"@angular/cdk@~12.2.12", "@angular/cdk@12.2.13":
   "integrity" "sha512-zSKRhECyFqhingIeyRInIyTvYErt4gWo+x5DQr0b7YLUbU8DZSwWnG4w76Ke2s4U8T7ry1jpJBHoX/e8YBpGMg=="
   "resolved" "https://registry.npmjs.org/@angular/cdk/-/cdk-12.2.13.tgz"
   "version" "12.2.13"
@@ -164,7 +164,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@^12.0.0 || ^13.0.0-0", "@angular/common@~12.1.0-", "@angular/common@12.1.5":
+"@angular/common@^12.0.0 || ^13.0.0-0", "@angular/common@~12.1.0-", "@angular/common@~12.2.12", "@angular/common@12.1.5":
   "integrity" "sha512-xs33eMhV79S85nbH5FVmujKY3OoczloW9oOGRe5tCzxsDDv85hadrB8Mbm3qI5WQ99DNk8M2+P0MW6uiyCAWkQ=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-12.1.5.tgz"
   "version" "12.1.5"
@@ -198,7 +198,7 @@
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/core@^12.0.0 || ^13.0.0-0", "@angular/core@~12.1.0-", "@angular/core@12.1.5":
+"@angular/core@^12.0.0 || ^13.0.0-0", "@angular/core@~12.1.0-", "@angular/core@~12.2.12", "@angular/core@12.1.5":
   "integrity" "sha512-okXnhAPxfblAWSe5M/IqrSATi+ul83a9o9PWOTFR/XCVcbx+neE2IwIr1dIDKBKj91b1CFalLS+uOSkN05PNkA=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-12.1.5.tgz"
   "version" "12.1.5"
@@ -212,7 +212,7 @@
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/material@12.2.13":
+"@angular/material@~12.2.12", "@angular/material@12.2.13":
   "integrity" "sha512-6g2GyN4qp2D+DqY2AwrQuPB3cd9gybvQVXvNRbTPXEulHr+LgGei00ySdFHFp6RvdGSMZ4i3LM1Fq3VkFxhCfQ=="
   "resolved" "https://registry.npmjs.org/@angular/material/-/material-12.2.13.tgz"
   "version" "12.2.13"
@@ -3165,6 +3165,13 @@
   "integrity" "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A=="
   "resolved" "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz"
   "version" "2.2.1"
+
+"epd-pattern-library@file:../epd-pattern-library-0.0.1.tgz":
+  "integrity" "sha512-Jx1HPgBwlxvnyT21fPuKzzwdg4kqVyIA9y4p8T2C885k+xPZXQrcMXXNMonYsehVHIF1qU/LzG6tRGk+G2ZeZw=="
+  "resolved" "file:../epd-pattern-library-0.0.1.tgz"
+  "version" "0.0.1"
+  dependencies:
+    "tslib" "^2.2.0"
 
 "err-code@^2.0.2":
   "integrity" "sha512-2bmlRpNKBxT/CRmPOlyISQpNj+qSeYvcym/uT0Jx2bMOlKLtSy1ZmLuVxSEKKyor/N5yhvp/ZiG1oE3DEYMSFA=="
