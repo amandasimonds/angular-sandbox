@@ -1,0 +1,24 @@
+.field-error {
+  font-size: 8px;
+  color: red;
+}
+
+.epd-input {
+  outline: none;
+  border: none;
+}
+
+.epd-input-wrapper {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: min-content;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  padding: 0 8px 0 16px;
+}
+
+.has-error {
+  border: 2px solid red;
+}

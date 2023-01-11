@@ -1,11 +1,36 @@
 <div class="form-row">
-  <input
-    type="text"
-    class="form-element"
-    [value]="value"
-    #input
-    (input)="changed(input.value)"
-    (blur)="touched()"
-    [disabled]="isDisabled"
-  />
+  <label class="form-label" [for]="fieldName">
+    <span class="is-required"> Name </span>
+    <span
+      class="field-error"
+      *ngIf="formField.hasError('required') && formField.dirty"
+    >
+      This is a required field.
+    </span>
+    <span
+      class="field-error"
+      *ngIf="formField.hasError('noEmptyString') && formField.dirty"
+    >
+      Please enter a valid name.
+    </span>
+  </label>
+  <div
+    class="epd-input-wrapper"
+    [ngClass]="{
+      'has-error': formField.invalid && formField.dirty
+    }"
+  >
+    <input
+      type="text"
+      class="epd-input"
+      [name]="formField"
+      [id]="formField"
+      [value]="value"
+      #input
+      (input)="onChange($event)"
+      (blur)="touched()"
+      [disabled]="isDisabled"
+    />
+    <mat-icon *ngIf="input.value.length > 0" svgIcon="clear"></mat-icon>
+  </div>
 </div>

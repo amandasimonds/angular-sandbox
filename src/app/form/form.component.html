@@ -1,6 +1,12 @@
 Custom Form
 <form [formGroup]="profileForm" (ngSubmit)="submitProfileForm()">
-  <app-input formControlName="name" required minlength="4"></app-input>
+  <app-input
+    formControlName="name"
+    fieldName="name"
+    [parentForm]="profileForm"
+    required
+    minlength="4"
+  ></app-input>
   <button mat-button type="submit" [disabled]="profileForm.invalid">
     Submit
   </button>

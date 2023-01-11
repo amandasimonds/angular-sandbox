@@ -1,5 +1,5 @@
-import { Component, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef, Input } from '@angular/core';
+import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -21,12 +21,25 @@ export class InputComponent implements ControlValueAccessor {
   public changed: (value: string) => void;
   public touched: () => void;
   public isDisabled: boolean = false;
+  @Input() parentForm: FormGroup;
+  @Input() fieldName = '';
+
+  public get formField(): FormControl {
+    return this.parentForm.get(this.fieldName) as FormControl;
+  }
 
   constructor() { }
 
   writeValue(value: string): void {
     this.value = value;
   }
+
+  public onChange(event: Event): void {
+    const value: string = (<HTMLInputElement>event.target).value;
+
+    this.changed(value);
+  }
+
   registerOnChange(fn: any): void {
     this.changed = fn;
 
