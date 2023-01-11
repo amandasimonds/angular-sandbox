@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { EmailValidators, UniversalValidators } from 'ngx-validators';
 import { FormModel } from './form-model';
 
 @Component({
@@ -10,40 +9,42 @@ import { FormModel } from './form-model';
 })
 export class FormComponent implements OnInit {
 
-  public registrationForm: FormGroup;
+  // public profileForm: FormGroup;
+
+  public profileForm: FormGroup = new FormGroup({
+    name: new FormControl()
+  });
 
   public passwordFieldType: string = 'password';
 
   get nameField(): FormControl {
-    return this.registrationForm.get('name') as FormControl;
+    return this.profileForm.get('name') as FormControl;
   }
 
   get emailField(): FormControl {
-    return this.registrationForm.get('email') as FormControl;
+    return this.profileForm.get('email') as FormControl;
   }
 
   get passwordField(): FormControl {
-    return this.registrationForm.get('password') as FormControl;
+    return this.profileForm.get('password') as FormControl;
   }
 
-  get favouriteHexCodeValue(): string {
-    return this.registrationForm.get('favouriteHexCode').value;
-  }
+  // get favouriteHexCodeValue(): string {
+  //   return this.profileForm.get('favouriteHexCode').value;
+  // }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public generateRegistrationForm(): void {
-    this.registrationForm =
+  public generateprofileForm(): void {
+    this.profileForm =
       new FormGroup({
         name: new FormControl(
           '',
           {
             validators: [
-              Validators.required,
-              UniversalValidators.noEmptyString
             ]
           }
         ),
@@ -51,8 +52,6 @@ export class FormComponent implements OnInit {
           '',
           {
             validators: [
-              Validators.required,
-              EmailValidators.normal
             ]
           }
         ),
@@ -60,8 +59,6 @@ export class FormComponent implements OnInit {
           '',
           {
             validators: [
-              Validators.required,
-              UniversalValidators.noWhitespace
             ]
           }
         ),
@@ -69,10 +66,10 @@ export class FormComponent implements OnInit {
       });
 
   }
-  public submitRegistrationForm(): void {
-    if (this.registrationForm.valid) {
+  public submitProfileForm(): void {
+    if (this.profileForm.valid) {
       const registrationRequest: FormModel = {
-        ...this.registrationForm.value
+        ...this.profileForm.value
       };
 
       // Success 🎉

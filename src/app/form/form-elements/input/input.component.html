@@ -1,3 +1,11 @@
 <div class="form-row">
-    <input type="text" class="form-element">
+  <input
+    type="text"
+    class="form-element"
+    [value]="value"
+    #input
+    (input)="changed(input.value)"
+    (blur)="touched()"
+    [disabled]="isDisabled"
+  />
 </div>
