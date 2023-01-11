@@ -20,13 +20,15 @@ import { CheckNumDirective } from './check-num.directive';
 import { HomeComponent } from './home/home.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HideAfterDirective } from './hide-after.directive';
-import { AdvancedSearchControlComponent } from './advanced-search-control/advanced-search-control.component';
-import { CustomFormFieldControlComponent } from './custom-form-field-control/custom-form-field-control.component';
+import { AdvancedSearchControlComponent } from './form/form-elements/advanced-search-control/advanced-search-control.component';
+import { CustomFormFieldControlComponent } from './form/form-elements/custom-form-field-control/custom-form-field-control.component';
 import { CommonModule } from '@angular/common';
 import { ApiComponent } from './api/api.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { SearchFieldModule, RegisterIconModule, ICON_SET, RegisterIconDirective } from "epd-pattern-library";
+import { FormComponent } from './form/form.component';
+import { InputComponent } from './form/form-elements/input/input.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { SearchFieldModule, RegisterIconModule, ICON_SET, RegisterIconDirective 
     HideAfterDirective,
     AdvancedSearchControlComponent,
     CustomFormFieldControlComponent,
-    ApiComponent
+    ApiComponent,
+    FormComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
