@@ -24,11 +24,12 @@ import { AdvancedSearchControlComponent } from './form/form-elements/advanced-se
 import { CustomFormFieldControlComponent } from './form/form-elements/custom-form-field-control/custom-form-field-control.component';
 import { CommonModule } from '@angular/common';
 import { ApiComponent } from './api/api.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { SearchFieldModule, RegisterIconModule, ICON_SET, RegisterIconDirective } from "epd-pattern-library";
 import { FormComponent } from './form/form.component';
 import { InputComponent } from './form/form-elements/input/input.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -56,10 +57,12 @@ import { InputComponent } from './form/form-elements/input/input.component';
     CommonModule,
     // HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
     MatDividerModule,
+    MatButtonModule,
     MatSelectModule,
     SearchFieldModule,
     RegisterIconModule.forRoot(ICON_SET)
